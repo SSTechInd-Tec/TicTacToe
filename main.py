@@ -9,9 +9,9 @@ table2 = [' '] * 9
 
 def print_table(table):
     print(f' {table[0]} | {table[1]} | {table[2]} ')
-    print('------------')
+    print('||||||||||||')
     print(f' {table[3]} | {table[4]} | {table[5]} ')
-    print('------------')
+    print('||||||||||||')
     print(f' {table[6]} | {table[7]} | {table[8]} ')
 
 
@@ -49,3 +49,5 @@ def check_winner(table):
         return 'No one is winner'
 
 # Game Play Logic
+
+print_table(table)
