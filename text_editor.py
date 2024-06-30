@@ -62,5 +62,46 @@ def text_editor():
 
     return convert_to_str
 
+# menu
 
-# app logic 
+def menu():
+    print('1. Create File')
+    print('2. Read File')
+    print('3. Append Data to File')
+    print('4. Menu')
+    print('5. Clear Screen')
+    print('6. Exit')
+
+
+# app logic
+
+
+print('Welcome to TextEditor')
+menu()
+
+while True:
+    inp = int(input('Choose an Option (1-6): '))
+
+    if inp == 1:
+        filename = input('Enter File Name: ')
+        data = text_editor()
+        write_file(filename, data)
+    elif inp == 2:
+        filename = input('Enter File Name: ')
+        data = read_file_v2(filename)
+        print(data)
+    elif inp == 3:
+        filename = input('Enter File Name: ')
+        new_data = text_editor()
+        msg = append_data_to_file(filename, new_data)
+        print(msg)
+    elif inp == 4:
+        menu()
+    elif inp == 5:
+        os.system('clear')
+        #  use cls in windows os
+        # os.system('cls')
+    elif inp == 6:
+        break
+    else:
+        print('Invalid Option')
